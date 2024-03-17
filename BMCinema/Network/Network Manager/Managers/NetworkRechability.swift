@@ -8,6 +8,7 @@
 import Foundation
 import Network
 
+/// It's responsible for checking Network reachability and detect if the app is online or offline.
 public enum NetworkReachability {
   public static let queue = DispatchQueue(label: "NetworkConnectivityMonitor")
   public static let monitor = NWPathMonitor()

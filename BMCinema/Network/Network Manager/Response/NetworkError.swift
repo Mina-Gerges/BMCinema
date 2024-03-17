@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// It's holding all different network related errors with their corresponding description
 public enum NetworkError: LocalizedError {
   case network
   case invalidURL
@@ -18,7 +19,7 @@ public enum NetworkError: LocalizedError {
     case .invalidURL:
       return "URL string is malformed."
     case .invalidServerResponse:
-      return "The server returned an invalid response."
+      return "Something went wrong. Please try again later."
     }
   }
 }

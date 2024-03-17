@@ -17,6 +17,9 @@
 		62069FB42BA6B1650094C90B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62069FB32BA6B1650094C90B /* NetworkError.swift */; };
 		62069FB62BA6B1A80094C90B /* APIsPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62069FB52BA6B1A80094C90B /* APIsPaths.swift */; };
 		62069FB82BA6B1CC0094C90B /* MovieRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62069FB72BA6B1CC0094C90B /* MovieRequests.swift */; };
+		627044202BA6D63800FE92E7 /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270441F2BA6D63800FE92E7 /* NowPlayingCoordinator.swift */; };
+		627044222BA6D64D00FE92E7 /* UpcomingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627044212BA6D64D00FE92E7 /* UpcomingCoordinator.swift */; };
+		627044242BA6D66600FE92E7 /* PopularCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627044232BA6D66600FE92E7 /* PopularCoordinator.swift */; };
 		62F9F6072BA5DAFC00E0C3F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9F6062BA5DAFC00E0C3F3 /* AppDelegate.swift */; };
 		62F9F6092BA5DAFC00E0C3F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9F6082BA5DAFC00E0C3F3 /* SceneDelegate.swift */; };
 		62F9F6102BA5DAFF00E0C3F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F9F60F2BA5DAFF00E0C3F3 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		62069FB32BA6B1650094C90B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		62069FB52BA6B1A80094C90B /* APIsPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsPaths.swift; sourceTree = "<group>"; };
 		62069FB72BA6B1CC0094C90B /* MovieRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequests.swift; sourceTree = "<group>"; };
+		6270441F2BA6D63800FE92E7 /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
+		627044212BA6D64D00FE92E7 /* UpcomingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCoordinator.swift; sourceTree = "<group>"; };
+		627044232BA6D66600FE92E7 /* PopularCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoordinator.swift; sourceTree = "<group>"; };
 		62F9F6032BA5DAFC00E0C3F3 /* BMCinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMCinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9F6062BA5DAFC00E0C3F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F9F6082BA5DAFC00E0C3F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				62F9F63E2BA5DB8C00E0C3F3 /* AppCoordinator.swift */,
+				6270441F2BA6D63800FE92E7 /* NowPlayingCoordinator.swift */,
+				627044232BA6D66600FE92E7 /* PopularCoordinator.swift */,
+				627044212BA6D64D00FE92E7 /* UpcomingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 		62069F9E2BA6AFDE0094C90B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				62069FAF2BA6B12D0094C90B /* APIConstants.swift */,
 				62069F9F2BA6B0270094C90B /* Network Manager */,
 				62069FA02BA6B0300094C90B /* Requests */,
 				62069FA12BA6B03D0094C90B /* Common Entities */,
@@ -129,7 +139,6 @@
 				62069FA22BA6B0550094C90B /* Managers */,
 				62069FA42BA6B05D0094C90B /* Request */,
 				62069FA32BA6B0590094C90B /* Response */,
-				62069FAF2BA6B12D0094C90B /* APIConstants.swift */,
 			);
 			path = "Network Manager";
 			sourceTree = "<group>";
@@ -391,15 +400,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627044242BA6D66600FE92E7 /* PopularCoordinator.swift in Sources */,
 				62069FA82BA6B0910094C90B /* APIManager.swift in Sources */,
 				62069FA62BA6B07D0094C90B /* RequestManager.swift in Sources */,
 				62069FB22BA6B1540094C90B /* DataParser.swift in Sources */,
 				62F9F63F2BA5DB8C00E0C3F3 /* AppCoordinator.swift in Sources */,
 				62069FAC2BA6B0DE0094C90B /* RequestProtocol.swift in Sources */,
 				62F9F6072BA5DAFC00E0C3F3 /* AppDelegate.swift in Sources */,
+				627044202BA6D63800FE92E7 /* NowPlayingCoordinator.swift in Sources */,
 				62069FB82BA6B1CC0094C90B /* MovieRequests.swift in Sources */,
 				62F9F63A2BA5DB5900E0C3F3 /* AppConstants.swift in Sources */,
 				62069FB02BA6B12D0094C90B /* APIConstants.swift in Sources */,
+				627044222BA6D64D00FE92E7 /* UpcomingCoordinator.swift in Sources */,
 				62069FAA2BA6B0AE0094C90B /* NetworkRechability.swift in Sources */,
 				62069FB42BA6B1650094C90B /* NetworkError.swift in Sources */,
 				62069FB62BA6B1A80094C90B /* APIsPaths.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Requests for all Movie related APIs
 enum MoviesRequests: RequestProtocol {
     case fetchNowPlayingMoviesFor(page: Int)
     case fetchPopularMoviesFor(page: Int)

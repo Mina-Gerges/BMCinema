@@ -11,6 +11,7 @@ public protocol DataParserProtocol {
   func parse<T: Decodable>(data: Data) throws -> T
 }
 
+/// DataParser responsible for parsing response coming from network.
 public class DataParser: DataParserProtocol {
   private var jsonDecoder: JSONDecoder
 

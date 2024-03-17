@@ -11,6 +11,7 @@ public protocol RequestManagerProtocol {
   func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T
 }
 
+/// The manager responsible for preparing the URL Session and performing the requests.
 public class RequestManager: RequestManagerProtocol {
   let apiManager: APIManagerProtocol
   let parser: DataParserProtocol
