@@ -16,5 +16,15 @@ class UpcomingCoordinator: NSObject, UINavigationControllerDelegate {
     func start() {
         navigationController.delegate = self
 
+        let movieRepo = UpcomingMoviesRepo(requestManager: RequestManager())
+        let fetchUpcomingMoviesUseCase = FetchUpcomingMoviesUseCase(repository: movieRepo)
+        let upcomingViewModel = UpcomingMoviesViewModel(
+            fetchUpcomingMoviesUseCase: fetchUpcomingMoviesUseCase
+        )
+        let upcomingViewController = UpcomingMoviesViewController(
+            viewModel: upcomingViewModel,
+            coordinator: self
+        )
+        navigationController.viewControllers = [upcomingViewController]
     }
 }

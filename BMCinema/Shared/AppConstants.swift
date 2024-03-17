@@ -8,4 +8,5 @@
 import Foundation
 
 enum AppConstants {
+    static let imageBaseUrl = "https://image.tmdb.org/t/p/original"
 }

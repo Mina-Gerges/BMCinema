@@ -1,0 +1,72 @@
+{
+  "dates": {
+    "maximum": "2024-04-10",
+    "minimum": "2024-03-20"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/gJL5kp5FMopB2sN4WZYnNT5uO0u.jpg",
+      "genre_ids": [
+        28,
+        12,
+        16,
+        35,
+        10751
+      ],
+      "id": 1011985,
+      "original_language": "en",
+      "original_title": "Kung Fu Panda 4",
+      "overview": "Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past.",
+      "popularity": 2701.294,
+      "poster_path": "/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+      "release_date": "2024-03-02",
+      "title": "Kung Fu Panda 4",
+      "video": false,
+      "vote_average": 6.904,
+      "vote_count": 146
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oBIQDKcqNxKckjugtmzpIIOgoc4.jpg",
+      "genre_ids": [
+        28,
+        53,
+        10752
+      ],
+      "id": 969492,
+      "original_language": "en",
+      "original_title": "Land of Bad",
+      "overview": "When a Delta Force special ops mission goes terribly wrong, Air Force drone pilot Reaper has 48 hours to remedy what has devolved into a wild rescue operation. With no weapons and no communication other than the drone above, the ground mission suddenly becomes a full-scale battle when the team is discovered by the enemy.",
+      "popularity": 855.698,
+      "poster_path": "/lYwjlcBjokC9EhfzfAOkTMQd5Ku.jpg",
+      "release_date": "2024-01-25",
+      "title": "Land of Bad",
+      "video": false,
+      "vote_average": 6.977,
+      "vote_count": 346
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "id": 872585,
+      "original_language": "en",
+      "original_title": "Oppenheimer",
+      "overview": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+      "popularity": 703.426,
+      "poster_path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "release_date": "2023-07-19",
+      "title": "Oppenheimer",
+      "video": false,
+      "vote_average": 8.118,
+      "vote_count": 7191
+    }
+  ],
+  "total_pages": 48,
+  "total_results": 947
+}
