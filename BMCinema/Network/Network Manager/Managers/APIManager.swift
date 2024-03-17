@@ -12,7 +12,7 @@ public protocol APIManagerProtocol {
   func perform(_ request: RequestProtocol) async throws -> Data
 }
 
-/// The manager responsible for the perform the actual calling and handle error messages.
+/// The manager responsible for performomg the actual calling and handling error messages.
 public class APIManager: NSObject, APIManagerProtocol {
   private let urlSession: URLSession
   public var parser: DataParserProtocol
