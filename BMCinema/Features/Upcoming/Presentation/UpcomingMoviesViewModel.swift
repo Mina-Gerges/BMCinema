@@ -22,14 +22,12 @@ class UpcomingMoviesViewModel: ObservableObject {
     @Published var totalMoviesCount = 0
     @Published var showErrorPlaceholder: Bool = false
     let fetchUpcomingMoviesUseCase: FetchUpcomingMoviesUseCase
-//    weak var detailsCoordinator: DetailsCoordinator?
-    private var currentPage = 1
-    private var canPaginate = true
+    var currentPage = 1
+    var canPaginate = true
 
     // MARK: - Initializer
     init(fetchUpcomingMoviesUseCase: FetchUpcomingMoviesUseCase) {
         self.fetchUpcomingMoviesUseCase = fetchUpcomingMoviesUseCase
-//        self.detailsCoordinator = detailsCoordinator
     }
 
     // MARK: - Methods
@@ -55,11 +53,5 @@ class UpcomingMoviesViewModel: ObservableObject {
                 }
             }
         }
-    }
-
-    // MARK: - Navigation
-    func showMovieDetails(withRow row: Int) {
-        guard let movieId = upcomingMovies[row].id else { return }
-//        detailsCoordinator?.showMovieDetails(withId: "\(movieId)")
     }
 }
