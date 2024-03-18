@@ -30,6 +30,7 @@ I implemented a detail screen that provides comprehensive information about the 
 | Framework                | UIKit + SwiftUI             |
 | Networking               | URLSession                                |
 | Testing                  | XCTest                                    |
+| Caching                  | URLSession Caching                        |
 
 
 # App Structure
@@ -50,7 +51,7 @@ Informative error messages are displayed to users when data retrieval or process
 The app's design and usability are carefully considered to provide a smooth and intuitive user experience.
 
 ## Caching: 
-Caching mechanisms are implemented using **SwiftData** to store previously fetched **NowPlaying** movies data locally and show the data in case of any network error or offline.
+Caching is implemented using **URLSession** caching. There is also commented code to cache using **SwiftData** for previously fetched **NowPlaying** movie data.
 
 ## Code Quality: 
 Best practices for code quality, readability, and maintainability are followed, adhering to Swift coding conventions.
