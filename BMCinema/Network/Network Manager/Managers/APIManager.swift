@@ -23,7 +23,11 @@ public class APIManager: NSObject, APIManagerProtocol {
   }
 
   public func perform(_ request: RequestProtocol) async throws -> Data {
-    guard NetworkReachability.isConnected else { throw NetworkError.network }
+      if NetworkReachability.isConnected {
+        urlSession.configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+      } else {
+        urlSession.configuration.requestCachePolicy = .returnCacheDataElseLoad
+      }
     let (data, response) = try await urlSession.data(for: request.createURLRequest())
     guard let httpResponse = response as? HTTPURLResponse,
     httpResponse.statusCode == 200 else { throw NetworkError.invalidServerResponse }
