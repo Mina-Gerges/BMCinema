@@ -15,5 +15,16 @@ class NowPlayingCoordinator: NSObject, UINavigationControllerDelegate {
     // MARK: - Setup the first ViewController for this Coordinator
     func start() {
         navigationController.delegate = self
+
+        let nowPlayingRepo = NowPlayingMoviesRepo(requestManager: RequestManager())
+        let fetchNowPlayingMoviesUseCase = FetchNowPlayingMoviesUseCase(repository: nowPlayingRepo)
+        let nowPlayingMoviesViewModel = NowPlayingMoviesViewModel(
+            fetchNowPlayingMoviesUseCase: fetchNowPlayingMoviesUseCase
+        )
+        let nowPlayingViewController = NowPlayingMoviesViewController(
+            viewModel: nowPlayingMoviesViewModel,
+            coordinator: self
+        )
+        navigationController.viewControllers = [nowPlayingViewController]
     }
 }

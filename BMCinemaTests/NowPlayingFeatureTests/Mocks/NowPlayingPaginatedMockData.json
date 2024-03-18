@@ -1,0 +1,69 @@
+{
+  "dates": {
+    "maximum": "2024-03-20",
+    "minimum": "2024-02-07"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/bg4SUY7M71owN9UepJfvVZ1Ypzx.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 987654,
+      "original_language": "en",
+      "original_title": "The Last Guardian",
+      "overview": "In a post-apocalyptic world, a young girl discovers a mysterious creature who may hold the key to humanity's survival.",
+      "popularity": 1250.23,
+      "poster_path": "/tHzqGkJ4Jf2XWnp02Kq4Qa7jQ6K.jpg",
+      "release_date": "2024-03-10",
+      "title": "The Last Guardian",
+      "video": false,
+      "vote_average": 8.21,
+      "vote_count": 623
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w7iUJ7ACIaCgvF5XdqSs0UNv3Rl.jpg",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "id": 987655,
+      "original_language": "en",
+      "original_title": "The Lost Prince",
+      "overview": "A young prince is thrust into a battle for his kingdom's survival when he discovers a dark conspiracy at the heart of his father's court.",
+      "popularity": 1450.69,
+      "poster_path": "/yOe1A5JOKAgSIbY1j3Nc7Ar7f29.jpg",
+      "release_date": "2024-03-15",
+      "title": "The Lost Prince",
+      "video": false,
+      "vote_average": 7.89,
+      "vote_count": 412
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lR9FZz4fWy2qLJ3BVLotGrWKsOV.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 987656,
+      "original_language": "en",
+      "original_title": "Love on the Airwaves",
+      "overview": "Two radio hosts with opposing viewpoints are forced to work together on a popular talk show. As they clash over every topic imaginable, they find themselves falling in love off the airwaves.",
+      "popularity": 980.14,
+      "poster_path": "/vNZDtbI0CBm9syb3VOByuyf3tUh.jpg",
+      "release_date": "2024-03-20",
+      "title": "Love on the Airwaves",
+      "video": false,
+      "vote_average": 6.75,
+      "vote_count": 291
+    }
+  ],
+  "total_pages": 58,
+  "total_results": 456
+}
