@@ -28,37 +28,47 @@ struct MovieDetailsView: View {
                             image
                                 .resizable()
                                 .aspectRatio(0.67, contentMode: .fit)
-                                .frame(height: 150)
+                                .frame(height: 180)
                         } placeholder: {
                             Image(.imagePlaceholder)
                                 .resizable()
                                 .aspectRatio(0.67, contentMode: .fit)
-                                .frame(height: 150)
+                                .frame(height: 180)
                                 .opacity(0.5)
                                 .overlay(
                                     ProgressView()
                                         .progressViewStyle(CircularProgressViewStyle())
                                 )
                         }
-                        VStack(alignment: .leading) {
-                            Text(viewModel.movie?.title ?? "")
-                                .font(.title)
-                            Text(viewModel.movie?.releaseDate ?? "")
-                                .font(.subheadline)
-
-                            Spacer()
-                            HStack {
-                                Image(systemName: "star.fill")
-                                Text(viewModel.movie?.voteAverage?.formattedString(decimalPoints: 1) ?? "")
+                        VStack(alignment: .leading, spacing: 10) {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(viewModel.movie?.title ?? "")
+                                    .font(.title)
+                                Text(viewModel.movie?.releaseDate ?? "")
+                                    .font(.subheadline)
                             }
-                            .foregroundColor(.red)
-                            .padding(.bottom, 10)
 
                             HStack {
                                 Image(systemName: "arrow.up.right.circle.fill")
                                 Text(viewModel.movie?.popularity?.formattedString(decimalPoints: 3) ?? "")
                             }
                             .foregroundColor(.yellow)
+                        }
+                    }
+
+                    if viewModel.shouldShowVoteDetails {
+                        HStack {
+                            HStack {
+                                Image(systemName: "star.fill")
+                                Text(viewModel.movie?.voteAverage?.formattedString(decimalPoints: 1) ?? "")
+                            }
+                            .foregroundColor(.red)
+                            
+                            HStack {
+                                Image(systemName: "number")
+                                Text("\(viewModel.movie?.voteCount ?? 0)")
+                            }
+                            .foregroundColor(.indigo)
                         }
                     }
 

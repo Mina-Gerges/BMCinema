@@ -28,6 +28,8 @@ extension UpcomingMoviesViewController: UITableViewDelegate, UITableViewDataSour
         if indexPath.row == viewModel.upcomingMovies.count - 4 {
             viewModel.fetchUpcomingMovies()
         }
+
+        cell.accessibilityIdentifier = "UpcomingMovieCell_\(indexPath.row)"
         return cell
     }
 

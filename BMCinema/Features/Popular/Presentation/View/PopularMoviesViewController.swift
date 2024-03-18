@@ -53,6 +53,7 @@ class PopularMoviesViewController: BaseViewController {
             UINib(nibName: PopularMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: PopularMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {

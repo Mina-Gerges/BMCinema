@@ -8,20 +8,19 @@
 import Foundation
 @testable import BMCinema
 
-/// Mock Successful fetching
+/// Mock Upcoming Movies Successful fetching
 class MockUpcomingMovieRepoSuccess: UpcomingMoviesRepoProtocol {
     func fetchMovies(page: Int) async throws -> BMCinema.MoviesPaginatedEntity {
-        guard let mockData = loadMockData() else {
-            throw NSError(domain: "MockDataError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to load mock data"])
+        guard let mockData = try loadMockData() else {
+            throw NSError(domain: "MockDataError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to load upcoming mock data"])
         }
         return mockData
     }
 
-    func loadMockData() -> MoviesPaginatedEntity? {
+    func loadMockData() throws -> MoviesPaginatedEntity? {
         let testBundle = Bundle(for: type(of: self))
          guard let path = testBundle.path(forResource: "UpcomingPaginatedMockData", ofType: "json") else {
-             print("Failed to locate mock_data.json")
-             return nil
+             throw NSError(domain: "MockDataError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to locate UpcomingPaginatedMockData.json"])
          }
 
          do {
@@ -32,8 +31,7 @@ class MockUpcomingMovieRepoSuccess: UpcomingMoviesRepoProtocol {
              let mockData = try decoder.decode(MoviesPaginatedEntity.self, from: data)
              return mockData
          } catch {
-             print("Error decoding mock data: \(error)")
-             return nil
+             throw NSError(domain: "MockDataError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error decoding mock data: \(error)"])
          }
      }
 }

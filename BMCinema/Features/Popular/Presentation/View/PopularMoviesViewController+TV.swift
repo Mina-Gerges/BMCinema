@@ -26,6 +26,8 @@ extension PopularMoviesViewController: UITableViewDelegate, UITableViewDataSourc
         if indexPath.row == viewModel.popularMovies.count - 4 {
             viewModel.fetchPopularMovies()
         }
+
+        cell.accessibilityIdentifier = "PopularMovieCell_\(indexPath.row)"
         return cell
     }
 

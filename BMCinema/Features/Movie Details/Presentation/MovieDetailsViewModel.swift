@@ -19,6 +19,12 @@ class MovieDetailsViewModel: ObservableObject {
     @Published var movie: MovieDetailsModel?
     let movieId: String?
     let fetchMovieDetailsUseCase: FetchMovieDetailsUseCase
+    var shouldShowVoteDetails: Bool {
+        if let voteAverage = movie?.voteAverage, let voteCount = movie?.voteCount {
+            return voteAverage != 0 && voteCount != 0
+        }
+        return false
+    }
 
     // MARK: - Initializer
     init(movieId: String, fetchMovieDetailsUseCase: FetchMovieDetailsUseCase) {

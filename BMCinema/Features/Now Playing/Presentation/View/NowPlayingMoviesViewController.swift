@@ -59,6 +59,7 @@ class NowPlayingMoviesViewController: BaseViewController {
             UINib(nibName: NowPlayingMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: NowPlayingMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {

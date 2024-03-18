@@ -26,6 +26,8 @@ extension NowPlayingMoviesViewController: UITableViewDelegate, UITableViewDataSo
         if indexPath.row == viewModel.nowPlayingMovies.count - 4 {
             viewModel.fetchNowPlayingMovies()
         }
+
+        cell.accessibilityIdentifier = "NowPlayingMovieCell_\(indexPath.row)"
         return cell
     }
 

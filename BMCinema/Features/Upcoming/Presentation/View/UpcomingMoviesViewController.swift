@@ -59,6 +59,7 @@ class UpcomingMoviesViewController: BaseViewController {
             UINib(nibName: UpcomingMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: UpcomingMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {
