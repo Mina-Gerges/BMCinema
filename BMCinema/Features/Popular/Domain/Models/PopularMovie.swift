@@ -15,9 +15,19 @@ struct PopularMovie {
     let title: String?
     let voteAverage: Double?
     let voteCount: Int?
-
+    
     /// Image Poster full path
     var posterImagePath: String? {
-      AppConstants.imageBaseUrl + (posterPath ?? "")
+        AppConstants.imageBaseUrl + (posterPath ?? "")
+    }
+    
+    init(id: Int?, overview: String?, popularity: Double?, posterPath: String?, title: String?, voteAverage: Double?, voteCount: Int?) {
+        self.id = id
+        self.overview = overview
+        self.popularity = popularity
+        self.posterPath = posterPath
+        self.title = title
+        self.voteAverage = voteAverage
+        self.voteCount = voteCount
     }
 }

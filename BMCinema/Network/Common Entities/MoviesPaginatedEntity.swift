@@ -8,14 +8,14 @@
 import Foundation
 
 struct MoviesPaginatedEntity: Decodable {
-  let dates: Dates?
-  let page: Int?
-  let results: [MovieEntity]?
-  let totalPages: Int?
-  let totalResults: Int?
+    let dates: Dates?
+    let page: Int?
+    let results: [MovieEntity]?
+    let totalPages: Int?
+    let totalResults: Int?
 }
 
 struct Dates: Decodable {
-  let maximum: String?
-  let minimum: String?
+    let maximum: String?
+    let minimum: String?
 }

@@ -13,9 +13,17 @@ struct UpcomingMovie {
     let posterPath: String?
     let releaseDate: String?
     let title: String?
-    
+
     /// Image Poster full path
     var posterImagePath: String? {
-      AppConstants.imageBaseUrl + (posterPath ?? "")
+        AppConstants.imageBaseUrl + (posterPath ?? "")
+    }
+
+    init(id: Int?, overview: String?, posterPath: String?, releaseDate: String?, title: String?) {
+        self.id = id
+        self.overview = overview
+        self.posterPath = posterPath
+        self.releaseDate = releaseDate
+        self.title = title
     }
 }
