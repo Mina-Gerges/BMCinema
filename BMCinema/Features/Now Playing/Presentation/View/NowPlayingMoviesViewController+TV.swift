@@ -21,7 +21,8 @@ extension NowPlayingMoviesViewController: UITableViewDelegate, UITableViewDataSo
         }
         let movie = viewModel.nowPlayingMovies[indexPath.row]
         cell.configure(with: movie)
-
+        cell.selectionStyle = .none
+        
         if indexPath.row == viewModel.nowPlayingMovies.count - 4 {
             viewModel.fetchNowPlayingMovies()
         }
@@ -30,5 +31,10 @@ extension NowPlayingMoviesViewController: UITableViewDelegate, UITableViewDataSo
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let movieId = viewModel.nowPlayingMovies[indexPath.row].id else { return }
+        coordinator?.navigateToMovieDetails(movieId: "\(movieId)")
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 /// The coordinator responsible for navigation through the Upcoming Tab.
 class UpcomingCoordinator: NSObject, UINavigationControllerDelegate {
@@ -26,5 +27,17 @@ class UpcomingCoordinator: NSObject, UINavigationControllerDelegate {
             coordinator: self
         )
         navigationController.viewControllers = [upcomingViewController]
+    }
+
+    func navigateToMovieDetails(movieId: String) {
+        let movieDetailsRepo = MovieDetailsRepo(requestManager: RequestManager())
+        let fetchMovieDetailsUseCase = FetchMovieDetailsUseCase(repository: movieDetailsRepo)
+        let movieDetailsViewModel = MovieDetailsViewModel(movieId: movieId, fetchMovieDetailsUseCase: fetchMovieDetailsUseCase)
+
+        let movieDetailsView = MovieDetailsView(viewModel: movieDetailsViewModel)
+        let hostingController = UIHostingController(rootView: movieDetailsView)
+
+        navigationController.isNavigationBarHidden = false
+        navigationController.pushViewController(hostingController, animated: true)
     }
 }

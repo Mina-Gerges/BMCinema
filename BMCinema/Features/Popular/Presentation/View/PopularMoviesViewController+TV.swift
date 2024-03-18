@@ -21,6 +21,7 @@ extension PopularMoviesViewController: UITableViewDelegate, UITableViewDataSourc
         }
         let movie = viewModel.popularMovies[indexPath.row]
         cell.configure(with: movie)
+        cell.selectionStyle = .none
 
         if indexPath.row == viewModel.popularMovies.count - 4 {
             viewModel.fetchPopularMovies()
@@ -30,5 +31,10 @@ extension PopularMoviesViewController: UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let movieId = viewModel.popularMovies[indexPath.row].id else { return }
+        coordinator?.navigateToMovieDetails(movieId: "\(movieId)")
     }
 }
