@@ -18,7 +18,7 @@ class PopularMovieTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     static let cellIdentifier = "\(PopularMovieTableViewCell.self)"
-    private let placeholderImage = UIImage(named: "ImagePlaceholder")
+    private let placeholderImage = UIImage(resource: .imagePlaceholder)
     private var imageLoadingTask: URLSessionDataTask?
 
     override func prepareForReuse() {

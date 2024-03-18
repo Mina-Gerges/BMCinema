@@ -32,11 +32,6 @@ struct MovieEntity: Decodable {
     let voteCount: Int?
 }
 
-struct GenreEntity: Decodable {
-    let id: Int?
-    let name: String?
-}
-
 struct ProductionCompanyEntity: Decodable {
     let id: Int?
     let logoPath: String?

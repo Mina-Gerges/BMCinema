@@ -59,6 +59,7 @@ class NowPlayingMoviesViewController: BaseViewController {
             UINib(nibName: NowPlayingMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: NowPlayingMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {
@@ -83,6 +84,9 @@ class NowPlayingMoviesViewController: BaseViewController {
         case .success:
             if viewModel.nowPlayingMovies.isEmpty {
                 showEmptyStateView()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                    self?.hideLoadingView()
+                }
             } else {
                 shownMoviesCountLabel?.text = "\(viewModel.shownMoviesCount)"
                 totalMoviesCountLabel?.text = "\(viewModel.totalMoviesCount)"

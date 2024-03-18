@@ -19,7 +19,7 @@ class NowPlayingMovieTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     static let cellIdentifier = "\(NowPlayingMovieTableViewCell.self)"
-    private let placeholderImage = UIImage(named: "ImagePlaceholder")
+    private let placeholderImage = UIImage(resource: .imagePlaceholder)
     private var imageLoadingTask: URLSessionDataTask?
 
     override func prepareForReuse() {

@@ -53,6 +53,7 @@ class PopularMoviesViewController: BaseViewController {
             UINib(nibName: PopularMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: PopularMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {
@@ -71,6 +72,9 @@ class PopularMoviesViewController: BaseViewController {
         switch state {
         case .loading:
             showLoadingView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.hideLoadingView()
+            }
         case .success:
             if viewModel.popularMovies.isEmpty {
                 showEmptyStateView()

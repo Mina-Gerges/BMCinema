@@ -59,6 +59,7 @@ class UpcomingMoviesViewController: BaseViewController {
             UINib(nibName: UpcomingMovieTableViewCell.cellIdentifier, bundle: .main),
             forCellReuseIdentifier: UpcomingMovieTableViewCell.cellIdentifier
         )
+        moviesTV?.accessibilityIdentifier = "moviesTV"
     }
 
     private func bindViewToModel() {
@@ -80,6 +81,9 @@ class UpcomingMoviesViewController: BaseViewController {
         switch state {
         case .loading:
             showLoadingView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.hideLoadingView()
+            }
         case .success:
             if viewModel.upcomingMovies.isEmpty {
                 showEmptyStateView()
