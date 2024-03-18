@@ -19,7 +19,7 @@ class AppCoordinator {
         let tabBarController =  UITabBarController()
         tabBarController.viewControllers = [
 //            setupNowPlayingCoordinator(),
-//            setupPopularCoordinator(),
+            setupPopularCoordinator(),
             setupUpcomingCoordinator()
         ]
 
