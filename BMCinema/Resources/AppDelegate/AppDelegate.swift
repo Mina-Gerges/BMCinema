@@ -13,8 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Start Monitoring for reachability to determine wether there is online connection or not.
+        NetworkReachability.startMonitoring()
         return true
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        NetworkReachability.stopMonitoring()
     }
 
     // MARK: UISceneSession Lifecycle
