@@ -22,7 +22,7 @@ public class RequestManager: RequestManagerProtocol {
   }
 
   private static func getUrlSession() -> URLSession {
-    let configuration = URLSessionConfiguration.ephemeral
+    let configuration = URLSessionConfiguration.default
     configuration.timeoutIntervalForRequest = 90
     configuration.timeoutIntervalForResource = 90
     configuration.requestCachePolicy = .useProtocolCachePolicy
