@@ -28,6 +28,7 @@ class MockUpcomingMovieRepoSuccess: UpcomingMoviesRepoProtocol {
              let url = URL(fileURLWithPath: path)
              let data = try Data(contentsOf: url)
              let decoder = JSONDecoder()
+             decoder.keyDecodingStrategy = .convertFromSnakeCase
              let mockData = try decoder.decode(MoviesPaginatedEntity.self, from: data)
              return mockData
          } catch {
