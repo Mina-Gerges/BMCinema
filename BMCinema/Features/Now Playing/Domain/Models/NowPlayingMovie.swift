@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class NowPlayingMovie: Identifiable, Hashable {
-    @Attribute(.unique) var id: Int?
+    var id: Int?
     let overview: String?
     let posterPath: String?
     let title: String?
